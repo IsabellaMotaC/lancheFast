@@ -28,7 +28,7 @@ class Index extends Component
 
     public function delete($id)
     {
-        Cliente::findOrFall($id)->delete();
+        Cliente::findOrFail($id)->delete();
         session()->flash('message', 'Cliente deletado com sucesso.');
     }
 }

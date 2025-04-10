@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Livewire\Clientes\Create;
+use App\Http\Livewire\Clientes\Edit;
+use App\Http\Livewire\Clientes\Show;
+use App\Livewire\Clientes\Index;
+
 use App\Livewire\Produto\ProdutoCreate;
 use App\Livewire\Produto\ProdutoEdit;
 use App\Livewire\Produto\ProdutoIndex;
