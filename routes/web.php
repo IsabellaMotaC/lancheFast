@@ -16,6 +16,8 @@ use App\Livewire\Funcionarios\Create as FuncionarioCreate;
 use App\Livewire\Funcionarios\Edit as FuncionarioEdit;
 use App\Livewire\Funcionarios\Show as FuncionarioShow;
 
+use App\Livewire\Administrador\{Index as AdminIndex, Create as AdminCreate, Edit as AdminEdit, Show as AdminShow};
+
 
 use Illuminate\Support\Facades\Route;
 
@@ -39,4 +41,12 @@ Route::prefix('funcionarios')->group(function () {
     Route::get('/create', FuncionarioCreate::class)->name('funcionarios.create');
     Route::get('/{funcionario}/edit', FuncionarioEdit::class)->name('funcionarios.edit');
     Route::get('/{funcionario}', FuncionarioShow::class)->name('funcionarios.show');
+});
+
+
+Route::prefix('administrador')->group(function () {
+    Route::get('/', AdminIndex::class)->name('administrador.index');
+    Route::get('/create', AdminCreate::class)->name('administrador.create');
+    Route::get('/{administrador}/edit', AdminEdit::class)->name('administrador.edit');
+    Route::get('/{administrador}', AdminShow::class)->name('administrador.show');
 });

@@ -9,9 +9,9 @@
    
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     </head>
-    <body>
+    <body class="bg-dark text-light">
         
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" data-bs-theme="dark">
         <div class="container-fluid">
             <a href="" class="navbar-brand">Lanche Fast</a>
             <button class="navbar-toggler" type="button" data-bg-toggler="collapse"
@@ -24,6 +24,7 @@
                     <a href="{{ route('clientes.index')}}" class="nav-link active">Clientes</a>
                     <a href="{{ route('funcionarios.index')}}" class="nav-link">Funcionários</a>
                     <a href="{{ route('produtos.index')}}" class="nav-link">Produtos</a>
+                    <a href="{{ route('administrador.index')}}" class="nav-link">Administrador</a>
                 </div>
 
             </div>
