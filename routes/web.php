@@ -1,15 +1,24 @@
 <?php
 
-use App\Http\Livewire\Clientes\Create;
-use App\Http\Livewire\Clientes\Edit;
-use App\Http\Livewire\Clientes\Show;
+use App\Livewire\Clientes\Create;
+use App\Livewire\Clientes\Edit;
+use App\Livewire\Clientes\Show;
 use App\Livewire\Clientes\Index;
 
 use App\Livewire\Produto\ProdutoCreate;
 use App\Livewire\Produto\ProdutoEdit;
 use App\Livewire\Produto\ProdutoIndex;
 use App\Livewire\Produto\ProdutoShow;
+
+
+use App\Livewire\Funcionarios\Index as FuncionarioIndex;
+use App\Livewire\Funcionarios\Create as FuncionarioCreate;
+use App\Livewire\Funcionarios\Edit as FuncionarioEdit;
+use App\Livewire\Funcionarios\Show as FuncionarioShow;
+
+
 use Illuminate\Support\Facades\Route;
+
 
 Route::prefix('clientes')->group(function(){
     Route::get('/', \App\Livewire\Clientes\Index::class)->name('clientes.index');
@@ -23,4 +32,11 @@ Route::prefix('produtos')->group(function () {
     Route::get('/create', ProdutoCreate::class)->name('produtos.create');
     Route::get('/{produto}', ProdutoShow::class)->name('produtos.show');
     Route::get('/{produto}/edit', ProdutoEdit::class)->name('produtos.edit');
+});
+
+Route::prefix('funcionarios')->name('funcionarios.')->group(function () {
+    Route::get('/', FuncionarioIndex::class)->name('index');
+    Route::get('/create', FuncionarioCreate::class)->name('create');
+    Route::get('/{funcionario}/edit', FuncionarioEdit::class)->name('edit');
+    Route::get('/{funcionario}', FuncionarioShow::class)->name('show');
 });
